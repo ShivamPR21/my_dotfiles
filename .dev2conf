@@ -1,0 +1,25 @@
+# Jai Sri Ram
+
+# add ros2 to envionment
+source /home/shivam/ros2/install/setup.zsh
+
+# add ros2_perception image_common
+source /home/shivam/ros2_perception/install/setup.zsh
+
+# add gazebo
+source /usr/share/gazebo/setup.sh
+
+# add gazebo ros packages
+source /home/shivam/gazebo_sim/ros2_pkgs/install/setup.zsh
+
+# add navigation2 packages to system
+source /home/shivam/ros2_experimentals/install/setup.zsh
+
+# ign gazebo
+# source /home/shivam/RoboticsInitiative1/ign_gazebo/install/setup.zsh
+
+# colcon argcomplete
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
+
+source $(dirname $(gem which colorls))/tab_complete.sh
+

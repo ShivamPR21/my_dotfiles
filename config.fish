@@ -5,27 +5,10 @@ set dangerous_colors 000000 333333 666666 ffffff ffff00 ff6600 ff0000 ff0033 330
 source /home/shivam/anaconda3/etc/fish/conf.d/conda.fish
 
 set EDITOR "code --wait"
-set python python3
+set -x python python3
 set ls colorls
 
-# turtle_bot3
-set TURTLEBOT3_MODEL waffle
-set GAZEBO_MODEL_PATH /home/shivam/ros2_foxy_experimentals/install/turtlebot3_gazebo/share/turtlebot3_gazebo/models $GAZEBO_MODEL_PATH
-
-# ceres
-set CMAKE_PREFIX_PATH /home/shivam/common_pkgs/install/ceres_install_dev $CMAKE_PREFIX_PATH
-set LD_LIBRARY_PATH /home/shivam/common_pkgs/install/ceres_install_dev/lib $LD_LIBRARY_PATH
-
-# vtk
-set CMAKE_PREFIX_PATH /home/shivam/common_pkgs/install/vtk7 $CMAKE_PREFIX_PATH
-set LD_LIBRARY_PATH /home/shivam/common_pkgs/install/vtk7/lib $LD_LIBRARY_PATH
-
-# pcl
-set CMAKE_PREFIX_PATH /home/shivam/common_pkgs/install/pcl_1_11_1 $CMAKE_PREFIX_PATH
-set LD_LIBRARY_PATH /home/shivam/common_pkgs/install/pcl_1_11_1/lib $LD_LIBRARY_PATH
-
-set CMAKE_PREFIX_PATH /home/shivam/ompl_dev/install $CMAKE_PREFIX_PATH
-set LD_LIBRARY_PATH /home/shivam/ompl_dev/install/lib $LD_LIBRARY_PATH
+source /home/shivam/.dev2conf.fish
 
 # zsh-source command for zsh config
 function zsh-source
