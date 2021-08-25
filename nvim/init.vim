@@ -28,6 +28,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 " COC completion
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
 " OSX stupid backspace fix
@@ -61,7 +63,7 @@ set cursorline
 
 " Theme and Styling 
 set t_Co=256
-let g:material_style='palenight' 
+let g:material_style='dark' 
 set background=dark
 colorscheme vim-material
 
@@ -74,10 +76,12 @@ let base16colorspace=256 " enable rich color with base16 themes
 
 hi Normal guibg=NONE ctermbg=NONE
 
+let g:ranger_map_keys = 0
+
 " Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
-let g:airline_theme='material'
+let g:airline_theme='badwolf'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 0
 
@@ -157,6 +161,7 @@ noremap <Leader>Y "+y
 noremap <Leader>P "+p
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+map <leader>r :Ranger<CR>
 " tab navigation: Alt or Ctrl+Shift may not work in terminal:
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
 " Tab navigation like Firefox: only 'open new tab' works in terminal
@@ -193,6 +198,7 @@ nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 
+nnoremap <silent> <C-K><C-T> :TagbarToggle<CR>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
